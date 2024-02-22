@@ -22,7 +22,8 @@
                                     <th>Penulis</th>
                                     <th>Penerbit</th>
                                     <th>Tahun Terbit</th>
-                                    <th>Aksi</th>
+                                    <th>Edit</th>
+                                    <th>Hapus</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,6 +35,10 @@
                                         <td>{{ $b->penerbit }}</td>
                                         <td>{{ $b->tahun_terbit }}</td>
                                     <td>
+                                    <a href="{{ route('buku.edit', $b->id) }}" class="btn btn-primary">                                                                                    
+                                        <i class="fa fa-solid fa-pen-square"></i>
+                                        </a>
+                                        <td>
                                         <form action="{{route('buku.hapus', $b->id) }}" method="post">
                                         @csrf 
                                         @method('DELETE')

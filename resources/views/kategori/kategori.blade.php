@@ -18,7 +18,8 @@
                             <thead>
                                 <tr>
                                     <th class="px-4 py-2">Nama Kategori</th>
-                                    <th class="px-4 py-2">Aksi</th>
+                                    <th class="col-1 px-4 py-2">Edit</th>
+                                    <th class="col-1 px-4 py-2">Hapus</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -26,6 +27,10 @@
                                     <tr>
                                         <td class="px-4 py-2">{{ $k->nama_kategori }}</td>
                                         <td>
+                                        <a href="{{ route('kategori.edit', $k->id) }}" class="btn btn-primary">                                                                                    
+                                        <i class="fa fa-solid fa-pen-square"></i>
+                                        </a>
+                                        <td>                                    
                                         <form action="{{route('kategori.hapus', $k->id) }}" method="post">
                                         @csrf 
                                         @method('DELETE')
