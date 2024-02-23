@@ -22,8 +22,8 @@
                                     <th>Penulis</th>
                                     <th>Penerbit</th>
                                     <th>Tahun Terbit</th>
-                                    <th>Edit</th>
-                                    <th>Hapus</th>
+                                    <th class="col-1 px-4 py-2">Edit</th>
+                                    <th class="col-1 px-4 py-2">Hapus</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,6 +37,7 @@
                                     <td>
                                     <a href="{{ route('buku.edit', $b->id) }}" class="btn btn-primary" sty>                                                                                    
                                         <i class="fa fa-solid fa-pen-square"></i>
+                                        Edit
                                         </a>
                                         <td>
                                         <form action="{{route('buku.hapus', $b->id) }}" method="post">
@@ -44,6 +45,7 @@
                                         @method('DELETE')
                                         <button type="submit" class ="btn btn-danger">
                                         <i class="fa fa-solid fa-trash"></i>
+                                        Hapus
                                         </button>
                                         </form>         
                                         

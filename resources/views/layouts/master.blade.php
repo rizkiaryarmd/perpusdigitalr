@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>XII RPL 4 - RIZKI ARYA R</title>
+    <title>DIGITAL LIBRARY - RIZKI A RAMDANI</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset ('src/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -44,7 +44,8 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fa solid fa-book-open"></i>
+                    
                     <span>Perpustakaan Digital</span></a>
             </li>
 
@@ -66,7 +67,7 @@
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="{{route ('kategori') }}">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fa solid fa-list"></i>
                     <span>Data Kategori</span></a>
             </li>
 
@@ -86,11 +87,6 @@
             </div>
 
             <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
 
         </ul>
         <!-- End of Sidebar -->
