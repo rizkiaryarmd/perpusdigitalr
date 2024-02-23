@@ -44,6 +44,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/buku/update/{id}',[BukuController::class, 'update'])->name('buku.update');
     Route::get('/kategori/edit/{id}',[KategoriController::class, 'edit'])->name('kategori.edit');
     Route::post('/kategori/update/{id}',[KategoriController::class, 'update'])->name('kategori.update');
+    Route::get('/report', [PeminjamanController::class, 'print'])->name('print'); 
+
 
 
 });
