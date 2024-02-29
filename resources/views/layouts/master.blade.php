@@ -43,7 +43,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{route('home') }}">
                     <i class="fa solid fa-book-open"></i>
                     
                     <span>Perpustakaan Digital</span></a>

@@ -14,21 +14,27 @@
                             </a>
                         </div>
 
+                        
+
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    
-                                    <th>Judul</th>
-                                    <th>Penulis</th>
-                                    <th>Penerbit</th>
-                                    <th>Tahun Terbit</th>
-                                    <th class="col-1 px-4 py-2">Edit</th>
-                                    <th class="col-1 px-4 py-2">Hapus</th>
+                                    <th class="text-center">Foto</th>
+                                    <th class="text-center">Judul</th>
+                                    <th class="text-center">Penulis</th>
+                                    <th class="text-center">Penerbit</th>
+                                    <th class="text-center">Tahun Terbit</th>
+                                    <th class="text-center">Edit</th>
+                                    <th class="text-center">Hapus</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($buku as $b)
                                     <tr>
+                                        <td class="text-center">
+                                        <img src="{{asset('storage/'.$b->foto) }}" alt="Foto Buku" width="100">
+                                        </td>
+                                        
                                         
                                         <td>{{ $b->judul }}</td>
                                         <td>{{ $b->penulis }}</td>
@@ -37,7 +43,7 @@
                                     <td>
                                     <a href="{{ route('buku.edit', $b->id) }}" class="btn btn-primary" sty>                                                                                    
                                         <i class="fa fa-solid fa-pen-square"></i>
-                                        Edit
+                                    
                                         </a>
                                         <td>
                                         <form action="{{route('buku.hapus', $b->id) }}" method="post">
@@ -45,7 +51,7 @@
                                         @method('DELETE')
                                         <button type="submit" class ="btn btn-danger">
                                         <i class="fa fa-solid fa-trash"></i>
-                                        Hapus
+                                        
                                         </button>
                                         </form>         
                                         
