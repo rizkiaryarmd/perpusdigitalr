@@ -5,7 +5,7 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PeminjamanController;
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,7 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/buku/edit/{id}',[BukuController::class, 'edit'])->name('buku.edit');
     Route::post('/buku/store', [BukuController::class, 'store'])->name('buku.store');
     Route::post('/buku/store', [BukuController::class, 'store'])->name('buku.store');
-    Route::post('/buku/update/{id}',[BukuController::class, 'update'])->name('buku.update');
+    Route::put('/buku/update/{id}',[BukuController::class, 'update'])->name('buku.update');
     Route::delete('/buku/hapus/{id}', [BukuController::class, 'hapus'])->name('buku.hapus');
     //peminjaman
     Route::get('/report', [PeminjamanController::class, 'print'])->name('print'); 

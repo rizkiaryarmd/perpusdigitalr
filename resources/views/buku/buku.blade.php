@@ -24,6 +24,7 @@
                                     <th class="text-center">Penulis</th>
                                     <th class="text-center">Penerbit</th>
                                     <th class="text-center">Tahun Terbit</th>
+                                    <th class="text-center">Sinopsis</th>
                                     <th class="text-center">Edit</th>
                                     <th class="text-center">Hapus</th>
                                 </tr>
@@ -36,16 +37,17 @@
                                         </td>
                                         
                                         
-                                        <td>{{ $b->judul }}</td>
-                                        <td>{{ $b->penulis }}</td>
-                                        <td>{{ $b->penerbit }}</td>
-                                        <td>{{ $b->tahun_terbit }}</td>
-                                    <td>
+                                        <td class=text-center>{{ $b->judul }}</td>
+                                        <td class=text-center>{{ $b->penulis }}</td>
+                                        <td class=text-center>{{ $b->penerbit }}</td>
+                                        <td class=text-center>{{ $b->tahun_terbit }}</td>
+                                        <td class=text-center>{{ $b->sinopsis }}</td>
+                                    <td class=text-center>
                                     <a href="{{ route('buku.edit', $b->id) }}" class="btn btn-primary" sty>                                                                                    
                                         <i class="fa fa-solid fa-pen-square"></i>
                                     
                                         </a>
-                                        <td>
+                                        <td class=text-center>
                                         <form action="{{route('buku.hapus', $b->id) }}" method="post">
                                         @csrf 
                                         @method('DELETE')
