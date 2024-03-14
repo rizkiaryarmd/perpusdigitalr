@@ -56,6 +56,10 @@ class BukuController extends Controller
         $buku = Buku::all();
         return view('welcome',['buku' => $buku]);
     }
+    public function show($id){
+        $buku = Buku::findOrFail($id);
+        return view ('buku.detail_buku', ['buku' => $buku]);
+    }
     public function hapus($id)
     {
         $buku = Buku::find($id);

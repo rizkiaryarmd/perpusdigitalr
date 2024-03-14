@@ -46,3 +46,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/peminjaman/selesai/{id}', [PeminjamanController::class, 'kembalikanBuku'])->name('peminjaman.kembalikan');
 
 });
+Route::get('/buku/detail/{id}', [BukuController::class, 'show'])->name('buku.show');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
