@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="container py-4">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
+<div class="container py-4 px-5 lg-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-10">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body">
                         <div class="mb-4">
                             <a href="{{ route('kategori.create') }}" class="btn btn-primary">
                                 + Tambah Data Kategori
@@ -26,11 +26,11 @@
                                 @forelse ($kategori as $k)
                                     <tr>
                                         <td class="px-4 py-2">{{ $k->nama_kategori }}</td>
-                                        <td>
+                                        <td class=text-center>
                                         <a href="{{ route('kategori.edit', $k->id) }}" class="btn btn-primary">                                                                                    
                                         <i class="fa fa-solid fa-pen-square"></i>
                                         </a>
-                                        <td>                                    
+                                        <td class=text-center>                                    
                                         <form action="{{route('kategori.hapus', $k->id) }}" method="post">
                                         @csrf 
                                         @method('DELETE')

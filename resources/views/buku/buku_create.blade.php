@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="container py-5">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card shadow-lg rounded-3">
@@ -31,11 +31,6 @@
                             <div class="mb-3">
                                 <label for="penerbit" class="form-label">Penerbit:</label>
                                 <input type="text" name="penerbit" class="form-control" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="sinopsis" class="form-label">Sinopsis:</label>
-                                <input type="text" name="sinopsis" class="form-control" required>
                             </div>
 
                             <div class="mb-3">
