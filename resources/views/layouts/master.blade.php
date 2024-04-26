@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Digital Library</title>
+  <title>Perpustakaan XII RPL 4</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -182,7 +182,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="{{ url('/home') }}" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-chart-bar"></i>
               <p>
                 Dashboard
                 <i class="right fas fa-angle-left"></i>
@@ -191,7 +191,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('home')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-home"></i>
                   <p>Home</p>
                 </a>
               </li>
@@ -203,6 +203,7 @@
              
             </ul>
           </li>
+          @role('admin|petugas')
           <li class="nav-item">
             <a href="{{ url('/buku') }}" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
@@ -230,6 +231,7 @@
               </p>
             </a>
           </li>
+          @endrole
           
             <ul class="nav nav-treeview">
               <li class="nav-item">
@@ -393,6 +395,7 @@
               </li>
             </ul>
           </li>
+          @role('admin')
           <li class="nav-header">USER MENU</li>
           <li class="nav-item">
             <a href="{{ url('/user') }}" class="nav-link">
@@ -403,6 +406,18 @@
               </p>
             </a>
           </li>
+          @endrole
+          @role('user')
+          <li class="nav-item">
+            <a href="{{ url('/user/peminjaman') }}" class="nav-link">
+              <i class="nav-icon far fa-user"></i>
+              <p>
+                Peminjaman
+                <span class="badge badge-info right"></span>
+              </p>
+            </a>
+          </li>
+          @endrole
          
             <ul class="nav nav-treeview">
               <li class="nav-item">

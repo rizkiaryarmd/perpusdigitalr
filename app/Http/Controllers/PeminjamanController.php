@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Peminjaman;
 use App\Models\User;
 use Barryvdh\DomPDF\Facade\Pdf;
-
+use Illuminate\Support\Facades\Auth;
 class PeminjamanController extends Controller
 {
     public function index()
@@ -71,6 +71,18 @@ class PeminjamanController extends Controller
         return redirect()->route('peminjaman.index')->with('success', 'Denda berhasil dibayar');
 
     }
+      
+    public function userPeminjaman()
+    {
+    $userId = Auth::id();
+
+    $peminjaman = Peminjaman::with('user', 'buku')
+    ->where('user_id', $userId)
+    ->get();
+
+    return view('peminjaman.user_peminjaman', compact('peminjaman'));
+    }
+    
 
  
     public function print(){
